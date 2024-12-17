@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Food Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Delicious Food Order</h1>
+            <p>Order your favorite food easily!</p>
+        </div>
+    </header>
+
+    <!-- Food Menu -->
+    <main>
+        <section id="food-menu">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="item">
+                    <img src="burger.jpg" alt="Burger" style="height: 190px;">
+                    <h3>Burger</h3>
+                    <p>Price: $5.99</p>
+                    <button onclick="addToCart('Burger', 5.99)">Add to Cart</button>
+                </div>
+                <!-- Item 2 -->
+                <div class="item">
+                    <img src="pizza.jpg" alt="Pizza" style="height: 190px;">
+                    <h3>Pizza</h3>
+                    <p>Price: $8.99</p>
+                    <button onclick="addToCart('Pizza', 8.99)">Add to Cart</button>
+                </div>
+                <!-- Item 3 -->
+                <div class="item">
+                    <img src="pasta.jpg" alt="Pasta" style="height: 190px;">
+                    <h3>Pasta</h3>
+                    <p>Price: $6.49</p>
+                    <button onclick="addToCart('Pasta', 6.49)">Add to Cart</button>
+                </div>
+                <!-- Item 4 -->
+                <div class="item">
+                    <img src="salad.jpg" alt="Salad" style="height: 190px;">
+                    <h3>Salad</h3>
+                    <p>Price: $4.99</p>
+                    <button onclick="addToCart('Salad', 4.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0.00</p>
+            <button id="checkout-btn" onclick="checkout()">Checkout</button>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have any questions or feedback? Get in touch with us!</p>
+            <form id="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" placeholder="Write your message" required></textarea>
+                
+                <button type="submit" onclick="submitContactForm(event)">Send Message</button>
+            </form>
+            <p id="contact-success" class="success-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Delicious Food Order | Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
